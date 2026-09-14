@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ToDo List Web</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>ToDo List</h1>
+        </header>
+        <div class="container">
+            <main class="todoWeb">
+                <h2>My Tasks</h2>
+                <form class="task-list">
+                    <div class="task-item">
+                        <input type="checkbox" id="Task1">
+                        <label for="Task1">07.00 - Olahraga</label>
+                    </div>
+                    <div class="task-item">
+                        <input type="checkbox" id="Task2">
+                        <label for="Task2">09.00 - Berangkat Kuliah</label>
+                    </div>
+                    <div class="task-item">
+                        <input type="checkbox" id="Task3">
+                        <label for="Task3">12.00 - Makan Siang</label>
+                    </div>
+                </form>
+            </main>
+            <aside class="addTask">
+                <h2>Add New Task</h2>
+                <form id="todoForm">
+                    <label for="newTask">Task Name:</label><br>
+                    <input type="text" id="newTask" placeholder="Enter new task..."><br>
+                    <label for="taskTime">Task Time:</label><br>
+                    <input type="time" id="taskTime" placeholder="Enter task time..."><br>
+                    <button type="submit">Add Task</button>
+                </form>
+            </aside>
+        </div>
+        <footer>
+            <p>&copy; 2026 ToDo List</p>   
+        </footer>
+
+    </body>
+</html>
