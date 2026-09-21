@@ -1,8 +1,4 @@
-let tasks  = [
-    {id: 1, time: "07:00", name: "Olahraga", completed: false},
-    {id: 2, time: "08:00", name: "Sarapan", completed: false},
-    {id: 3, time: "09:00", name: "Belajar", completed: false}
-];
+let tasks = [];
 
 const taskList = document.getElementById('taskList');
 const todoForm = document.getElementById('todoForm');
