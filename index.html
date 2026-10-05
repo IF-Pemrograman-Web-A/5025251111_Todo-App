@@ -1,38 +1,50 @@
 <!DOCTYPE html>
 <html lang="id">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>ToDo List Web</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <header>
-            <h1>ToDo List</h1>
-            <button id="themeToggle" class="btn-theme">Dark Mode</button>
-        </header>
-        <div class="container">
-            <main class="todoWeb">
-                <h2>My Tasks</h2>
-                <div id="taskList"></div>
-            </main>
-            <aside class="addTask">
-                <h2>Add New Task</h2>
-                <form id="todoForm">
-                    <label for="newTask">Task Name:</label><br>
-                    <input type="text" id="newTask" placeholder="Enter new task..." required><br>
-                    
-                    <label for="taskTime">Task Time:</label><br>
-                    <input type="time" id="taskTime" placeholder="Enter task time..." required><br>
-                    
-                    <button type="submit">Add Task</button>
-                </form>
-            </aside>
-        </div>
-        <footer>
-            <p>&copy; 2026 ToDo List</p>   
-        </footer>
-        
-        <script src="script.js"></script>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List Web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>ToDo List</h1>
+        <button id="themeToggle" class="btn-theme" aria-label="Ganti Tema">Dark Mode</button>
+    </header>
+    <div class="container">
+        <main class="todoWeb" role="main">
+            <h2>My Tasks</h2>
+            <div id="taskList" aria-live="polite"></div>
+        </main>
+        <aside class="addTask" role="complementary">
+            <h2>Add New Task</h2>
+            <form id="todoForm" aria-label="Formulir Tambah Tugas">
+                <label for="newTask">Task Name:</label><br>
+                <input type="text" id="newTask" placeholder="Enter new task..." required aria-required="true" aria-label="Nama Tugas"><br>
+                
+                <label for="taskTime">Task Time:</label><br>
+                <input type="time" id="taskTime" required aria-required="true" aria-label="Waktu Tugas"><br>
+
+                <label for="taskNotificationTime">Notification Time (Optional):</label><br>
+                <input type="time" id="taskNotificationTime" aria-label="Waktu Notifikasi Tugas"><br>
+
+                <label>Task Image (Live Camera):</label><br>
+                <video id="camera-video" width="100%" height="auto" autoplay></video>
+                <div style="display: flex; gap: 5px; margin-bottom: 10px;">
+                    <button type="button" id="startCamera">Start Camera</button>
+                    <button type="button" id="takePhoto">Take Photo</button>
+                </div>
+                <canvas id="camera-canvas" style="display:none;"></canvas>
+                <p id="photoStatus" style="font-size: 12px; color: green; display: none;">Foto berhasil diambil!</p>
+                
+                <button type="submit" aria-label="Simpan Tugas">Add Task</button>
+            </form>
+        </aside>
+    </div>
+    <footer>
+        <p>&copy; 2026 ToDo List</p>   
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
 </html>
