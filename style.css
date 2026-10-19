@@ -175,6 +175,71 @@ body.dark input[type="time"] {
     border-color: #555;
 }
 
+.addTask ul {
+    list-style-type: none; 
+    padding: 0;
+    margin: 0 0 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px; 
+}
+
+.addTask ul li a {
+    display: block;
+    padding: 10px 15px;
+    background-color: #f1f3f5;
+    color: #333;
+    text-decoration: none; 
+    border-radius: 6px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.addTask ul li a:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.addTask ul li a.active {
+    background-color: #007bff;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 123, 255, 0.2);
+}
+
+body.dark .addTask ul li a {
+    background-color: #2d2d2d;
+    color: #e0e0e0;
+}
+
+body.dark .addTask ul li a:hover,
+body.dark .addTask ul li a.active {
+    background-color: #0056b3;
+    color: white;
+}
+
+#todoForm input[type="text"],
+#todoForm input[type="time"],
+#todoForm select {
+    width: 100%; 
+    padding: 10px; 
+    margin-top: 5px; 
+    margin-bottom: 15px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    font-family: inherit;
+    font-size: 14px;
+    background-color: white;
+}
+
+body.dark #todoForm input[type="text"],
+body.dark #todoForm input[type="time"],
+body.dark #todoForm select {
+    background-color: #333;
+    color: #e0e0e0;
+    border: 1px solid #555;
+}
+
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
