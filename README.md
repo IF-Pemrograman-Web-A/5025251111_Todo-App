@@ -7,14 +7,25 @@ NRP : 5025251111
 Kelas : Pemrograman Web (A)
 
 # Deskripsi
-Website ToDo List sederhana sebagai penerapan dari HTML dan CSS. Website ini menggunakan beberapa HTML semantic element seperti heaader, main, aside, dan footer. Adapun fitur yang terdapat pada website ini adalah menambahkan task dan menandai task yang sudah dikerjakan tapi masih menggunakan data statis. Web ini dapat digunakan di dekstop maupun mobile.
+(Update E04) 
+Pada pembaruan ini, penyimpanan data ToDo App telah dimigrasikan dari penyimpanan lokal browser (IndexedDB) ke sistem basis data server menggunakan PHP dan MySQL.
+Perubahan dan Fitur yang Diterapkan:
+1. Modularisasi Kode: Memecah struktur file HTML utama menjadi beberapa modul PHP (index.php, navibar.php, dan content.php) agar lebih rapi.
+2. Sistem Kategori: Menambahkan navigasi menu (sidebar) untuk memisahkan daftar tugas menjadi dua tipe: Personal dan Shared.
+3. Konfigurasi Database: Mengimplementasikan skema database (data.sql) dan koneksi server (config.php).
+4. Fungsi CRUD menggunakan PHP:
+  - Create: Menerima data dari form dan menyimpannya ke MySQL (insertprocess.php).
+  - Read: Menampilkan tugas secara dinamis dari database berdasarkan kategori (content.php).
+  - Update: Mengubah status penyelesaian tugas (statustoggle.php).
+  - Delete: Menghapus baris data tugas dari database (deletepro.php).
 
-- Tampilan Dekstop
-<img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/c345268e-248d-4d09-b22f-58c7f04774f7" />
+Dokumentasi web:
+<img width="1913" height="1013" alt="image" src="https://github.com/user-attachments/assets/7cb300da-aa8d-4d95-9069-3ed3bca59c26" />
 
-- Tampilan Mobile
-<img width="339" height="725" alt="image" src="https://github.com/user-attachments/assets/fa09fb5e-3402-429e-825b-1f08030076eb" />
-<img width="340" height="710" alt="image" src="https://github.com/user-attachments/assets/ef1e9e25-35b4-4947-ba1a-a47c71cdfb1a" />
+-
+<img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/73b6e200-a2ec-448d-88f8-287423b865fa" />
 
-Link
-https://if-pemrograman-web-a.github.io/5025251111_Todo-App/
+-
+<img width="1917" height="1016" alt="image" src="https://github.com/user-attachments/assets/11774051-d6b0-4b78-9e22-73c70ffb9693" />
+
+
