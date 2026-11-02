@@ -1,3 +1,4 @@
+<?php $currentType = isset($_GET['type']) ? $_GET['type'] : 'Personal'; ?>
 <aside class="addTask">
     <h2>Menu</h2>
     <ul>
