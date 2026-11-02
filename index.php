@@ -18,6 +18,7 @@
         <main class='todoweb'>
             <?php include 'content.php'; ?>
         </main>
-    </div>  
+    </div> 
+    <script src="script.js"></script> 
 </body>
 </html>
