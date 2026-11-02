@@ -68,3 +68,30 @@ if (startCameraBtn && cameraVideo) {
         }
     });
 }
+
+let deferredPrompt;
+const installBtn = document.getElementById('install-button');
+
+window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    if (installBtn) {
+        installBtn.hidden = false;
+    }
+});
+
+if (installBtn) {
+    installBtn.addEventListener('click', async () => {
+        if (!deferredPrompt) return;
+        await deferredPrompt.prompt();
+        deferredPrompt = null;
+        installBtn.hidden = true;
+    });
+}
+
+window.addEventListener('appinstalled', () => {
+    if (installBtn) {
+        installBtn.hidden = true;
+    }
+    deferredPrompt = null;
+});

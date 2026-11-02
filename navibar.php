@@ -1,5 +1,8 @@
 <?php $currentType = isset($_GET['type']) ? $_GET['type'] : 'Personal'; ?>
 <aside class="addTask">
+    <button id="install-button" class="btn-install" hidden>
+        Install
+    </button>
     <h2>Menu</h2>
     <ul>
         <li><a href="index.php?type=Personal" class="<?php echo ($currentType === 'Personal') ? 'active' : ''; ?>">Personal</a></li>

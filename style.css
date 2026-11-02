@@ -240,6 +240,44 @@ body.dark #todoForm select {
     border: 1px solid #555;
 }
 
+.btn-install {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    background-color: #27ae60;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    box-shadow: 0 2px 5px rgba(39, 174, 96, 0.25);
+    transition: background-color 0.3s ease, transform 0.1s ease, box-shadow 0.3s ease;
+}
+
+.btn-install:hover {
+    background-color: #219150;
+    box-shadow: 0 4px 10px rgba(39, 174, 96, 0.4);
+}
+
+.btn-install:active {
+    transform: scale(0.98);
+}
+
+body.dark .btn-install {
+    background-color: #2ecc71;
+    color: #121212;
+}
+
+body.dark .btn-install:hover {
+    background-color: #27ae60;
+    color: #ffffff;
+}
+
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
