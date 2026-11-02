@@ -1,11 +1,11 @@
 const CACHE = "todo-app-v1";
 const SHELL = [
-    "/", 
-    "/index.php",
-    "/style.css", 
-    "/script.js",
-    "/manifest.json",
-    "/img/icon.png" 
+    "./", 
+    "./index.php",
+    "./style.css", 
+    "./script.js",
+    "./manifest.json",
+    "./img/icon.png" 
 ];
 
 self.addEventListener("install", e => {
