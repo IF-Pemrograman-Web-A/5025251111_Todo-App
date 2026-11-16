@@ -1,4 +1,4 @@
-const CACHE = "todo-app-v1";
+const CACHE = "todo-app-v2";
 const SHELL = [
     "./", 
     "./index.php",
@@ -26,6 +26,12 @@ self.addEventListener("activate", e => {
 
 self.addEventListener("fetch", e => {
     if (e.request.method !== "GET") return;
+
+    if (e.request.url.includes("/api/")) {
+        e.respondWith(fetch(e.request));
+        return;
+    }
+
     e.respondWith(
         caches.match(e.request, { ignoreSearch: true })
         .then(r => r || fetch(e.request))
@@ -36,7 +42,7 @@ self.addEventListener('message', (event) => {
     if (event.data && event.data.type === 'SHOW_NOTIFICATION') {
         self.registration.showNotification(event.data.title, {
             body: event.data.body,
-            icon: '/favicon.ico', 
+            icon: './img/icon.png', 
             vibrate: [200, 100, 200]
         });
     }
